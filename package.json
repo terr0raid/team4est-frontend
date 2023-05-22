@@ -3,23 +3,43 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev --turbo",
+		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build"
 	},
 	"dependencies": {
-		"@types/node": "20.1.0",
-		"@types/react": "18.2.5",
+		"@types/node": "20.2.1",
+		"@types/react": "18.2.6",
 		"@types/react-dom": "18.2.4",
 		"autoprefixer": "10.4.14",
+		"classnames": "^2.3.2",
 		"eslint": "8.40.0",
-		"eslint-config-next": "13.4.1",
-		"next": "13.4.1",
+		"eslint-config-next": "13.4.3",
+		"next": "13.4.3",
+		"next-intl": "^2.14.2",
 		"postcss": "8.4.23",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"tailwindcss": "3.3.2",
-		"typescript": "5.0.4"
+		"typescript": "5.0.4",
+		"zustand": "^4.3.8"
+	},
+	"devDependencies": {
+		"@storybook/addon-essentials": "^7.0.12",
+		"@storybook/addon-interactions": "^7.0.12",
+		"@storybook/addon-links": "^7.0.12",
+		"@storybook/addon-styling": "^1.0.8",
+		"@storybook/blocks": "^7.0.12",
+		"@storybook/nextjs": "^7.0.12",
+		"@storybook/react": "^7.0.12",
+		"@storybook/testing-library": "^0.1.0",
+		"@types/string-hash": "^1.1.1",
+		"@types/uuid": "^9.0.1",
+		"eslint-plugin-storybook": "^0.6.12",
+		"storybook": "^7.0.12",
+		"storybook-tailwind-dark-mode": "^1.0.22"
 	}
 }
