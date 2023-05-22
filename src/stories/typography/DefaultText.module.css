@@ -1,0 +1,44 @@
+.text {
+	@apply text-secondary dark:text-primary;
+}
+
+.text_h1 {
+	@apply text-8xl tracking-tighter font-light;
+}
+.text_h2 {
+	@apply text-6xl tracking-tight font-light;
+}
+.text_h3 {
+	@apply text-5xl tracking-normal font-normal;
+}
+.text_h4 {
+	@apply text-4xl tracking-wide font-normal;
+}
+.text_h5 {
+	@apply text-2xl tracking-normal font-normal;
+}
+.text_h6 {
+	@apply text-xl tracking-wider font-medium;
+}
+
+.text_subtitle1 {
+	@apply text-base tracking-wider font-normal;
+}
+.text_subtitle2 {
+	@apply text-sm tracking-wide font-medium;
+}
+
+.text_body1 {
+	@apply text-base tracking-wider font-normal;
+}
+.text_body2 {
+	@apply text-sm tracking-wide font-normal;
+}
+
+.text_button {
+	@apply text-sm tracking-widest font-medium;
+}
+
+.text_caption {
+	@apply text-xs tracking-wide font-normal;
+}

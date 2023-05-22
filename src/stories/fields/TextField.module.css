@@ -1,0 +1,35 @@
+.textfield {
+	@apply rounded-lg text-secondary dark:text-primary focus:ring-accent-600 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500;
+}
+
+.textfield_outlined {
+	@apply bg-transparent border border-primaryButton dark:bg-transparent dark:border-primaryButton dark:placeholder-gray-400;
+}
+
+.textfield_standart {
+	@apply bg-accent border border-primaryButton text-primary dark:bg-accent dark:border-primaryButton dark:placeholder-primary dark:placeholder-opacity-50;
+}
+
+.textfield_disabled {
+	@apply cursor-not-allowed opacity-50 bg-gray-300 border border-gray-300 text-gray-900 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-gray-400;
+}
+
+.textfield_fullWidth {
+	@apply block w-full;
+}
+
+.textfield_small {
+	@apply px-2.5 py-1.5 text-sm;
+}
+
+.textfield_medium {
+	@apply px-2.5 py-2.5 text-base;
+}
+
+.textfield_large {
+	@apply px-3.5 py-3.5 text-lg;
+}
+
+.label {
+	@apply block mb-2 pl-1 text-sm font-medium text-gray-900 dark:text-white;
+}

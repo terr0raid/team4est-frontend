@@ -1,0 +1,19 @@
+.btn_standart {
+	@apply text-white bg-primaryButton hover:bg-accent focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  text-center dark:bg-primaryButton dark:hover:bg-accent dark:focus:ring-blue-800;
+}
+
+.btn_outlined {
+	@apply bg-transparent border border-primaryButton text-primaryButton hover:bg-primaryButton hover:bg-opacity-60 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-transparent dark:border-primaryButton dark:focus:ring-blue-800;
+}
+
+.btn_small {
+	@apply px-5 py-1.5 text-sm;
+}
+
+.btn_medium {
+	@apply px-5 py-2.5 text-base;
+}
+
+.btn_large {
+	@apply px-5 py-3.5 text-lg;
+}
