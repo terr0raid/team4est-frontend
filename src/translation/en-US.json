@@ -1,5 +1,16 @@
 {
 	"auth": {
-		"welcome": "Hello world!"
+		"title": "Sign in to Team4est",
+		"sign_in": "Sign In",
+		"sign_up": "Sign Up",
+		"logout": "Logout",
+		"email": "Email",
+		"password": "Password",
+		"password_confirm": "Confirm password",
+		"forgot_password": "Forgot password?",
+		"privacy_text": "We’ll never share your details. Read our ",
+		"privacy_link": "Privacy Policy.",
+		"create_account": "New to team4est?",
+		"create_account_link": "Create an account."
 	}
 }

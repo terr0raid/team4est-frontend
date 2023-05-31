@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-	:root {
-		--color-primary: rgb(3 13 33);
-	}
-}
-
 body {
 	@apply bg-primary text-secondary dark:bg-secondary dark:text-primary;
 }

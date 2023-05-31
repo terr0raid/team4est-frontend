@@ -12,7 +12,4 @@ const preview: Preview = {
 		},
 	},
 }
-export const globalTypes = {
-	darkMode: ['class', '[data-mode="dark"]'],
-}
 export default preview
