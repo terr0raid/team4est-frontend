@@ -8,7 +8,7 @@ export async function POST(req: Request) {
 		headers: {
 			'Content-Type': 'application/json',
 		},
-	}).then(res => res.json())
+	})
 
 	return NextResponse.json(res, { status: res.status })
 }

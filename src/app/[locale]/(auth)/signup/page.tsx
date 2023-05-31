@@ -1,6 +1,13 @@
+import SignUpCard from '@/components/signup/SignUpCard'
+import { useAuth } from '@/hooks/useAuth'
 import React from 'react'
-function SignUp() {
-	return <div>SignUp</div>
+async function SignUp() {
+	const token = useAuth.fromServer()
+	return (
+		<div>
+			<SignUpCard />
+		</div>
+	)
 }
 
 export default SignUp
