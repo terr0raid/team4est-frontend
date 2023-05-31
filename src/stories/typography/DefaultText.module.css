@@ -42,3 +42,7 @@
 .text_caption {
 	@apply text-xs tracking-wide font-normal;
 }
+
+.text_overline {
+	@apply text-[11px] tracking-wide font-normal;
+}

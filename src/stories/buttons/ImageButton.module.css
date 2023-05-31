@@ -1,0 +1,15 @@
+.img_btn {
+	@apply cursor-pointer outline-none select-none;
+}
+
+.btn_circle {
+	@apply rounded-full w-10 h-10;
+}
+
+.btn_rounded {
+	@apply rounded-lg w-14 h-14;
+}
+
+.btn_square {
+	@apply rounded-none w-14 h-14;
+}

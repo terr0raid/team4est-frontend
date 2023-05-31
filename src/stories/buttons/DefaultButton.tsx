@@ -7,20 +7,20 @@ import { SizeEnum } from '../constants/sizeEnum'
 type DefaultButtonProps = {
 	type?: 'submit' | 'button'
 	children: React.ReactNode
-	onClick?: () => void
-	variant?: string
-	size?: string
+	onClick?: (event: React.MouseEvent<HTMLElement>) => void
+	variant?: VariantEnum
+	size?: SizeEnum
 	fullWidth?: boolean
 	disabled?: boolean
 	args?: any
+	style?: string
 }
 
 const DefaultButtonProps: DefaultButtonProps = {
 	type: 'button',
 	children: 'Button',
-	onClick: () => {},
-	variant: 'standart',
-	size: 'medium',
+	variant: VariantEnum.STANDART,
+	size: SizeEnum.MEDIUM,
 	fullWidth: false,
 	disabled: false,
 }
@@ -39,7 +39,9 @@ function DefaultButton({ ...props }: DefaultButtonProps) {
 				[styles.btn_small]: props.size === SizeEnum.SMALL,
 				[styles.btn_medium]: props.size === SizeEnum.MEDIUM,
 				[styles.btn_large]: props.size === SizeEnum.LARGE,
-			})} ${props.fullWidth && 'w-full'}
+				[styles.btn_disabled]: props.disabled,
+			})} ${props.fullWidth ? 'w-full' : ''}
+			${props.style}
 				`}
 		>
 			{props.children}

@@ -1,9 +1,4 @@
-type VariantEnum = {
-	OUTLINED: string
-	STANDART: string
-}
-
-export const VariantEnum: VariantEnum = {
-	OUTLINED: 'outlined',
-	STANDART: 'standart',
+export enum VariantEnum {
+	OUTLINED = 'outlined',
+	STANDART = 'standart',
 }

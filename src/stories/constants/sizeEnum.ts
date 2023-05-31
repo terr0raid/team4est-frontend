@@ -1,11 +1,5 @@
-type SizeEnum = {
-	SMALL: string
-	MEDIUM: string
-	LARGE: string
-}
-
-export const SizeEnum: SizeEnum = {
-	SMALL: 'small',
-	MEDIUM: 'medium',
-	LARGE: 'large',
+export enum SizeEnum {
+	SMALL = 'small',
+	MEDIUM = 'medium',
+	LARGE = 'large',
 }

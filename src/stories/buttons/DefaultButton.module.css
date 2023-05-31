@@ -1,19 +1,23 @@
 .btn_standart {
-	@apply text-white bg-primaryButton hover:bg-accent focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  text-center dark:bg-primaryButton dark:hover:bg-accent dark:focus:ring-blue-800;
+	@apply text-primary bg-primaryButton hover:bg-accent rounded-lg text-center outline-none dark:bg-primaryButton dark:hover:bg-accent dark:focus:ring-blue-800;
 }
 
 .btn_outlined {
-	@apply bg-transparent border border-primaryButton text-primaryButton hover:bg-primaryButton hover:bg-opacity-60 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center dark:bg-transparent dark:border-primaryButton dark:focus:ring-blue-800;
+	@apply bg-transparent border border-primaryButton text-primaryButton hover:bg-primaryButton hover:bg-opacity-60 rounded-lg text-center dark:bg-transparent dark:border-primaryButton;
 }
 
 .btn_small {
-	@apply px-5 py-1.5 text-sm;
+	@apply px-6 py-1.5 text-sm;
 }
 
 .btn_medium {
-	@apply px-5 py-2.5 text-base;
+	@apply px-8 py-2.5 text-base;
 }
 
 .btn_large {
-	@apply px-5 py-3.5 text-lg;
+	@apply px-6 py-3.5 text-lg;
+}
+
+.btn_disabled {
+	@apply opacity-50 cursor-not-allowed;
 }

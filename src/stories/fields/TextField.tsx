@@ -5,7 +5,7 @@ import styles from './TextField.module.css'
 import classNames from 'classnames'
 
 type TextFieldProps = {
-	label?: string
+	label?: string | React.ReactNode
 	placeholder?: string
 	type?: string
 	required?: boolean
@@ -19,8 +19,8 @@ type TextFieldProps = {
 	error?: string
 	helperText?: string
 	style?: string
-	variant: string
-	size: string
+	variant: VariantEnum
+	size: SizeEnum
 	fullWidth?: boolean
 	multiline?: boolean
 	rows?: number
@@ -71,7 +71,7 @@ export const TextField = ({ ...props }: TextFieldProps) => {
 				name={props.name}
 				id={props.id}
 				placeholder={props.placeholder}
-				value={props.value}
+				{...(props.value && { value: props.value })}
 				onChange={props.onChange}
 				onBlur={props.onBlur}
 				onFocus={props.onFocus}
@@ -96,6 +96,11 @@ export const TextField = ({ ...props }: TextFieldProps) => {
 					[styles.textfield_fullWidth]: props.fullWidth,
 				})}`}
 			/>
+			{props.error && (
+				<p className='mt-2 text-sm text-red-600 dark:text-red-500'>
+					{props.error}
+				</p>
+			)}
 		</div>
 	)
 }

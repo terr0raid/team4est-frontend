@@ -1,15 +1,17 @@
 import React from 'react'
 import styles from './Card.module.css'
-import classNames from 'classnames'
 type CardProps = {
 	children: React.ReactNode
 	style?: string
-	args?: any
+	args?: React.DetailedHTMLProps<
+		React.HTMLAttributes<HTMLDivElement>,
+		HTMLDivElement
+	>
 }
 
 export const Card = ({ ...props }: CardProps) => {
 	return (
-		<div {...props.args} className={`${classNames(styles.card, props.style)}`}>
+		<div {...props.args} className={`${styles.card} ${props.style}`}>
 			{props.children}
 		</div>
 	)

@@ -5,7 +5,7 @@ import styles from './DefaultText.module.css'
 
 type DefaultText = {
 	children: React.ReactNode
-	type: string
+	type: TextTypes
 	style?: string
 	element?: string
 	args?: any
@@ -37,7 +37,8 @@ function DefaultText({ ...props }: DefaultText) {
 				[styles.text_body2]: props.type === TextTypes.body2,
 				[styles.text_button]: props.type === TextTypes.button,
 				[styles.text_caption]: props.type === TextTypes.caption,
-			})} ${styles.text} ${props.style}
+				[styles.text_overline]: props.type === TextTypes.overline,
+			})} ${props.style}
     `}
 		>
 			{props.children}

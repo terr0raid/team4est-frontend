@@ -1,0 +1,15 @@
+.btn_standart {
+	@apply text-primary outline-none rounded-full bg-secondaryButton hover:bg-opacity-80 p-2;
+}
+.btn_outlined {
+	@apply text-secondaryButton rounded-full bg-transparent hover:text-opacity-20 p-2;
+}
+.btn_radius_small {
+	@apply w-8 h-8 p-2;
+}
+.btn_radius_medium {
+	@apply w-12 h-12 p-3;
+}
+.btn_radius_large {
+	@apply w-16 h-16 p-4;
+}

@@ -5,7 +5,7 @@ import { TextTypes } from '../constants/textTypes'
 import Link from 'next/link'
 type DefaultText = {
 	children: React.ReactNode
-	type: string
+	type: TextTypes
 	style?: string
 	href: string
 	element?: string
@@ -23,10 +23,10 @@ const DefaultTextProps: DefaultText = {
 function LinkText({ ...props }: DefaultText) {
 	props = { ...DefaultTextProps, ...props }
 	return (
-		<Link {...props.args} href={props.href}>
+		<Link {...props.args} href={props.href} className={props.style}>
 			<DefaultText
 				type={props.type}
-				style={`${styles.link_text} ${props.style}`}
+				style={`${styles.link_text}`}
 				element={props.element}
 			>
 				{props.children}
