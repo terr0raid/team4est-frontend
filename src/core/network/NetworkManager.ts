@@ -1,19 +1,35 @@
+import { APIError } from '../model/APIError'
+
 const url = 'http://localhost:3000/api/'
 export namespace NetworkManager {
+	export async function upload(
+		path: string,
+		data?: any,
+		query?: string
+	): Promise<any> {
+		const res = await fetch(`${url}${path}?` + new URLSearchParams(query), {
+			method: 'POST',
+			body: data,
+		})
+		return res
+	}
 	export async function post(
 		path: string,
 		data?: Object,
 		query?: string
 	): Promise<any> {
-		const res = await fetch(`${url}${path}`, {
+		const res = await fetch(`${url}${path}?` + new URLSearchParams(query), {
 			method: 'POST',
 			body: JSON.stringify(data),
-		}).then(res => res)
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		})
 
 		return res
 	}
-	export async function get(path: string, query?: Object): Promise<any> {
-		const res = await fetch(`${url}${path}`, {
+	export async function get(path: string, query?: string): Promise<any> {
+		const res = await fetch(`${url}${path}?` + new URLSearchParams(query), {
 			method: 'GET',
 		})
 		return res
@@ -23,12 +39,9 @@ export namespace NetworkManager {
 		data?: Object,
 		query?: string
 	): Promise<any> {
-		const res = await fetch(`${url}${path}/${query}`, {
+		const res = await fetch(`${url}${path}?` + new URLSearchParams(query), {
 			method: 'PUT',
 			body: JSON.stringify(data),
-			headers: {
-				'Content-Type': 'application/json',
-			},
 		})
 		return res
 	}
@@ -38,12 +51,9 @@ export namespace NetworkManager {
 		data?: Object,
 		query?: string
 	): Promise<any> {
-		const res = await fetch(`${url}${path}/${query}`, {
+		const res = await fetch(`${url}${path}?` + new URLSearchParams(query), {
 			method: 'DELETE',
 			body: JSON.stringify(data),
-			headers: {
-				'Content-Type': 'application/json',
-			},
 		})
 		return res
 	}

@@ -7,6 +7,8 @@ interface MenuProps {
 	anchorEl: null | HTMLElement
 	open: boolean
 	onClose: () => void
+	style?: string
+	multiplier?: number
 }
 
 function Menu({ ...props }: MenuProps) {
@@ -23,13 +25,15 @@ function Menu({ ...props }: MenuProps) {
 			const rect = props.anchorEl.getBoundingClientRect()
 			setAnchorPosition({
 				top: rect.top + rect.height + 4,
-				left: rect.left - rect.width * 3,
+				left: rect.left - rect.width * (props.multiplier || 1),
 			})
 		}
-	}, [props.anchorEl])
+	}, [props.anchorEl, props.multiplier])
 
 	return props.open ? (
-		<div className='fixed inset-0 z-50 flex items-center justify-center w-full h-full'>
+		<div
+			className={`fixed inset-0 z-50 flex items-center justify-center w-full h-full`}
+		>
 			<Card
 				args={{
 					ref: menuRef,
@@ -40,7 +44,7 @@ function Menu({ ...props }: MenuProps) {
 						left: anchorPosition.left,
 					},
 				}}
-				style={`${props.open ? 'scale-100' : 'scale-0'}`}
+				style={`${props.open ? 'scale-100' : 'scale-0'} ${props.style}`}
 			>
 				{props.children}
 			</Card>

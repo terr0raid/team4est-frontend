@@ -3,13 +3,13 @@
 }
 
 .btn_circle {
-	@apply rounded-full w-10 h-10;
+	@apply rounded-full;
 }
 
 .btn_rounded {
-	@apply rounded-lg w-14 h-14;
+	@apply rounded-lg;
 }
 
 .btn_square {
-	@apply rounded-none w-14 h-14;
+	@apply rounded-none;
 }

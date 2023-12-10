@@ -9,7 +9,8 @@ import { BanknotesIcon } from '@heroicons/react/24/solid'
 type IconButtonProps = {
 	type?: 'submit' | 'button'
 	icon: React.ReactNode
-	onClick?: () => void
+	children?: React.ReactNode
+	onClick?: (event: React.MouseEvent<HTMLElement>) => void
 	variant?: VariantEnum
 	disabled?: boolean
 	radius?: SizeEnum
@@ -35,20 +36,17 @@ function IconButton({ ...props }: IconButtonProps) {
 			{...props.args}
 			disabled={props.disabled}
 			type={props.type}
-			onClick={() => {
-				if (props.onClick) props.onClick()
-			}}
-			className={`${classNames({
+			onClick={props.onClick ?? props.onClick}
+			className={classNames(props.style, {
 				[styles.btn_standart]: props.variant === VariantEnum.STANDART,
 				[styles.btn_outlined]: props.variant === VariantEnum.OUTLINED,
 				[styles.btn_radius_small]: props.radius === SizeEnum.SMALL,
 				[styles.btn_radius_medium]: props.radius === SizeEnum.MEDIUM,
 				[styles.btn_radius_large]: props.radius === SizeEnum.LARGE,
 			})}
-				${props.style}
-			`}
 		>
 			{props.icon}
+			{props.children}
 		</button>
 	)
 }

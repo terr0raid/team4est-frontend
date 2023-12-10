@@ -83,6 +83,7 @@ export const TextField = ({ ...props }: TextFieldProps) => {
 				aria-invalid={props.error ? 'true' : 'false'}
 				aria-describedby={props.helperText ? 'helper-text' : undefined}
 				aria-label={props.label}
+				aria-multiline={props.multiline}
 				multiple={props.multiline}
 				className={`${classNames(props.style, {
 					[styles.textfield]: true,

@@ -1,0 +1,35 @@
+{
+	"metadata": {
+		"title": "team4est",
+		"desc": "proje fikirlerinizi dünyayla paylaşın"
+	},
+	"auth": {
+		"metadata": {
+			"title": "welcome to team4est"
+		},
+		"title": "Team4est'a Hoşgeldin!",
+		"username": "Kullanıcı Adı",
+		"phone": "Telefon Numarası",
+		"bio": "Biyografi",
+		"last_step": "Son Adım",
+		"name": "İsim",
+		"last_name": "Soyisim",
+		"start": "Hadi Başlayalım!",
+		"profile": "Profil Fotoğrafı",
+		"next": "Devam et",
+		"sign_in": "Giriş Yap",
+		"sign_up": "Kayıt Ol",
+		"logout": "Çıkış Yap",
+		"email": "Mail",
+		"password": "Şifre",
+		"password_confirm": "Şifre Tekrar",
+		"forgot_password": "Şifrenizi mi unuttunuz?",
+		"privacy_text": "Kişisel detaylarınızı asla paylaşmayacağız. Daha fazlası için: ",
+		"privacy_link": "Kullanım Koşulları.",
+		"create_account": "team4est da yeni misin?",
+		"create_account_link": "Bir hesap oluştur.",
+		"already_have_an_account": "Zaten bir hesabın var mı?",
+		"step_1": "Hesap Bilgileri",
+		"step_2": "Profil Bilgileri"
+	}
+}

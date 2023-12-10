@@ -4,9 +4,9 @@ import { verifyJwtToken } from '@/lib/jwt/auth'
 import { isAuthPages } from '@/lib/utils/isAuthPages'
 
 const i18n = createMiddleware({
-	locales: ['en-US', 'tr-TR'],
+	locales: ['en', 'tr'],
 
-	defaultLocale: 'en-US',
+	defaultLocale: 'en',
 	localeDetection: true,
 })
 

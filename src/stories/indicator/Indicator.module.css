@@ -1,0 +1,20 @@
+.indicator_list {
+	@apply flex space-x-20;
+}
+.indicator_divider {
+	@apply flex w-full bg-gray-200 h-0.5 dark:bg-gray-700;
+}
+
+.indicator {
+	@apply z-10 flex items-center justify-center w-6 h-6 rounded-full ring-0 ring-primary sm:ring-8 shrink-0;
+}
+
+.indicator_active {
+	@apply bg-blue-200 dark:bg-blue-900 dark:ring-gray-800;
+}
+.indicator_completed {
+	@apply bg-green-200 dark:bg-green-900 dark:ring-gray-900;
+}
+.indicator_default {
+	@apply bg-gray-200 dark:bg-gray-700 dark:ring-gray-900;
+}

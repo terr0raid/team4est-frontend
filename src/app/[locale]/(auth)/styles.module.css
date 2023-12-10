@@ -1,0 +1,29 @@
+.main {
+	@apply flex min-h-screen flex-col items-center justify-center space-y-4 pb-2;
+}
+
+.loading_card {
+	@apply w-full max-w-sm p-4 sm:p-6 md:p-8 space-y-4 divide-y divide-gray-200 shadow dark:divide-gray-700;
+}
+
+.loading_main {
+	@apply w-full flex flex-col justify-center items-center animate-pulse space-y-3;
+}
+
+.loading_text {
+	@apply h-3 bg-primaryButton rounded dark:bg-gray-600 w-14 mb-2.5;
+}
+
+.loading_input {
+	@apply w-full h-8 bg-primaryButton rounded dark:bg-gray-700;
+}
+.loading_btn {
+	@apply w-full h-12 bg-primaryButton rounded dark:bg-gray-700;
+}
+
+.text_loading {
+	@apply h-3 bg-gray-400 rounded dark:bg-gray-600 w-full mb-2.5;
+}
+.text_loading_p {
+	@apply w-48;
+}

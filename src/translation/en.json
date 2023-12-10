@@ -1,0 +1,35 @@
+{
+	"metadata": {
+		"title": "team4est",
+		"desc": "share your project ideas with world"
+	},
+	"auth": {
+		"metadata": {
+			"title": "welcome to team4est"
+		},
+		"title": "Welcome to Team4est",
+		"username": "Username",
+		"phone": "Phone",
+		"bio": "Biography",
+		"last_step": "Last step",
+		"name": "Name",
+		"last_name": "Last name",
+		"start": "Let's start",
+		"profile": "Select Profile",
+		"next": "Next",
+		"sign_in": "Sign In",
+		"sign_up": "Sign Up",
+		"logout": "Logout",
+		"email": "Email",
+		"password": "Password",
+		"password_confirm": "Confirm password",
+		"forgot_password": "Forgot password?",
+		"privacy_text": "We’ll never share your details. Read our ",
+		"privacy_link": "Privacy Policy.",
+		"create_account": "New to team4est?",
+		"create_account_link": "Create an account.",
+		"already_have_an_account": "Already have an account?",
+		"step_1": "Account Info",
+		"step_2": "Profile Info"
+	}
+}

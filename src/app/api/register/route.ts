@@ -1,14 +1,49 @@
 import { NextResponse } from 'next/server'
+import { cookies } from 'next/headers'
+import { useAuth } from '@/hooks/useAuth'
 
 export async function POST(req: Request) {
+	const cookieList = cookies()
 	const { email, password } = await req.json()
-	const res = await fetch(`'http://localhost:8080/api/v1/auth/register`, {
-		method: 'POST',
-		body: JSON.stringify({ email, password, roles: ['ROLE_USER'] }),
-		headers: {
-			'Content-Type': 'application/json',
-		},
-	})
+	try {
+		const res = await fetch(`http://localhost:8080/api/v1/auth/register`, {
+			method: 'POST',
+			body: JSON.stringify({ email, password }),
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		})
 
-	return NextResponse.json(res, { status: res.status })
+		if (res.status === 201) {
+			const data = await res.json()
+			cookieList.set('token', data.accessToken)
+			cookieList.set('refreshToken', data.refreshToken)
+
+			const auth = { ...data, user: await useAuth.fromServer() }
+
+			const response = NextResponse.json(
+				{ success: true, data: auth },
+				{ status: 201, headers: { 'content-type': 'application/json' } }
+			)
+
+			return response
+		} else {
+			const { message, status } = await res.json()
+			return NextResponse.json(
+				{
+					success: false,
+					message: message,
+				},
+				{ status: status || 403 }
+			)
+		}
+	} catch (error) {
+		return NextResponse.json(
+			{
+				success: false,
+				message: 'Something went wrong',
+			},
+			{ status: 500 }
+		)
+	}
 }

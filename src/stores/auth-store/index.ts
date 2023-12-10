@@ -1,6 +1,6 @@
 import { verifyJwtToken } from '@/lib/jwt/auth'
 import { StateCreator } from 'zustand'
-import { Auth } from '../../../types'
+import { Auth } from '../../types'
 
 export interface AuthSlice {
 	auth: Auth | null

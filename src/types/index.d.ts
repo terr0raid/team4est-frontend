@@ -1,8 +1,11 @@
 import { JWTPayload } from 'jose'
+import React from 'react'
 
 interface User {
 	id: string
 	username: string
+	name: string
+	lastname: string
 	email: string
 	profile: string
 	phone: string
@@ -24,5 +27,18 @@ interface Auth {
 	tokenType?: string
 	expiresIn?: number
 	expiresAt?: number
-	payload: Payload | null
+	user?: Payload | null
+}
+
+interface Step {
+	step: number
+	active: boolean
+	completed: boolean
+	label: string
+}
+
+interface Dialog {
+	message: string
+	title: string
+	type: 'success' | 'error' | 'warning' | 'info'
 }

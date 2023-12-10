@@ -1,5 +1,5 @@
 import { jwtVerify } from 'jose'
-import { Payload } from '../../../types'
+import { Payload } from '../../types'
 
 export function getJwtSecretKey() {
 	const secret = process.env.JWT_SECRET_KEY
